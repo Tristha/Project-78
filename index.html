@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>
+            My Family Book
+        </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <center>
+        <h1>My Family Book</h1>
+        <br>
+        <img id="family_array" src="family.jpg">
+        <br>
+        <h2 id="family_name">My family</h2>
+    <button onclick="next()" id="next">Next</button>
+</center>
+    <script>
+        var family=["family.jpg" ,"father.jpg" , "mother.jpg" , "sis-1.jpg" , "sis-2.jpg" , "dog.jpg"];
+
+        var familyname=[ "My Family" , "Ankur Khurana" , "Gayatri Mahadevan" , "Dhriti Iyer Khurana" , "Tristha Iyer Khurana" , "Hero"];
+var i=0;
+    function next()
+    {
+      i++;
+      if(i>5)
+      {
+          i=0;
+      }
+      var update_family=family[i];
+      var update_family_name=familyname[i];
+      document.getElementById("family_array").src=update_family;
+      document.getElementById("family_name").innerHTML=update_family_name;
+    }
+    </script>
+    
+    </body>
+</html>
